@@ -1,0 +1,124 @@
+{
+  "shaders": [
+    {
+      "name": "solid",
+      "vertex": "shaders/direct.vert",
+      "fragment": "shaders/solid.frag",
+      "attr": ["vertex_pos"],
+      "unif": [
+        "model_matrix",
+        "camera_matrix",
+        "projection_matrix",
+        "color"
+      ]
+    },
+    {
+      "name": "image",
+      "vertex": "shaders/direct_tex.vert",
+      "fragment": "shaders/image.frag",
+      "attr": ["vertex_pos", "tex_coord"],
+      "unif": [
+        "model_matrix",
+        "camera_matrix",
+        "projection_matrix",
+        "tex_sampler"
+      ]
+    },
+    {
+      "name": "image_colorize",
+      "vertex": "shaders/direct_tex.vert",
+      "fragment": "shaders/image_colorized.frag",
+      "attr": ["vertex_pos", "tex_coord"],
+      "unif": [
+        "model_matrix",
+        "camera_matrix",
+        "projection_matrix",
+        "tex_sampler",
+        "color"
+      ]
+    },
+    {
+      "name": "image_sheet",
+      "vertex": "shaders/direct_tex.vert",
+      "fragment": "shaders/sheet.frag",
+      "attr": ["vertex_pos", "tex_coord"],
+      "unif": [
+        "model_matrix",
+        "camera_matrix",
+        "projection_matrix",
+        "tex_sampler",
+        "tile_id_flat",
+        "tile_set_size"
+      ]
+    },
+    {
+      "name": "iso_tilemap",
+      "vertex": "shaders/iso_tilemap.vert",
+      "fragment": "shaders/iso_tilemap.frag",
+      "attr": ["vertex_pos", "map_coord"],
+      "unif": [
+        "iso_matrix",
+        "model_matrix",
+        "camera_matrix",
+        "projection_matrix",
+        "map_data",
+        "map_size",
+        "map_tile_size",
+        "tile_set",
+        "tile_set_size",
+        "tile_pixel_size",
+        "selected_tile",
+        "selection_begin",
+        "selection_mode",
+        "selection_color"
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "name": "cool_snake",
+      "src": "res/cool_snek.png"
+    },
+    {
+      "name": "tile_set",
+      "src": "res/road_tileset.png"
+    },
+    {
+      "name": "nav_tileset",
+      "src": "res/nav_tileset.png"
+    },
+    {
+      "name": "cursor",
+      "src": "res/cursor.png"
+    },
+    {
+      "name": "font",
+      "src": "res/font.png"
+    },
+    {
+      "name": "editor_icons",
+      "src": "res/editor_icons.png"
+    },
+    {
+      "name": "humanoid",
+      "src": "res/humanoid.png"
+    },
+    {
+      "name": "semaphore_01",
+      "src": "res/semaphore01.png"
+    },
+    {
+      "name": "semaphore_02",
+      "src": "res/semaphore02.png"
+    },
+    {
+      "name": "tree",
+      "src": "res/tree.png"
+    },
+    {
+      "name": "house",
+      "src": "res/house01.png"
+    }
+  ],
+  "animations": []
+}
